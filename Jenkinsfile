@@ -32,7 +32,7 @@ pipeline {
 	
 		stage('Deployment') {
 			steps {
-				sh 'sshpass -p "786" scp target/gamutgurus.war manoj3@172.17.0.3:/home/manoj3/distros/apache-tomcat-8.5.65/webapps
+				sh 'sshpass -p "786" scp target/gamutgurus.war manoj3@172.17.0.3:/home/manoj3/distros/apache-tomcat-8.5.65/webapps'
 				sh 'sshpass -p "786" ssh manoj3@172.17.0.3 "/home/manoj3/distros/apache-tomcat-8.5.65/bin/startup.sh"'
 	    	}
 		}
